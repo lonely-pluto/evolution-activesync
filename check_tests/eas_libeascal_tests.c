@@ -673,7 +673,7 @@ GError *error = NULL;
 	
 	g_debug("error from test_cal_get_invalid_sync_key is  %s",dbus_g_error_get_name(error));
 	fail_if(g_strcmp0 (dbus_g_error_get_name(error),         
-	                   "org.meego.activesyncd.SyncError.INVALIDSYNCKEY"),  
+	                   "org.gnome.activesyncd.SyncError.INVALIDSYNCKEY"),  
 	        "The Error returned by the server is not correct.");
 	
     //  free everything!
@@ -726,7 +726,7 @@ START_TEST (test_cal_add_invalid_sync_key)
 	
 	g_debug("error is %s",dbus_g_error_get_name(error));
 	fail_if(g_strcmp0 (dbus_g_error_get_name(error),         
-	                   "org.meego.activesyncd.SyncError.INVALIDSYNCKEY"),  
+	                   "org.gnome.activesyncd.SyncError.INVALIDSYNCKEY"),  
 	        "The Error returned by the server is not correct.");
 	
     //  free everything!
@@ -778,7 +778,7 @@ START_TEST (test_cal_delete_invalid_sync_key)
 	
 	g_debug("error is %s",dbus_g_error_get_name(error));
 	fail_if(g_strcmp0 (dbus_g_error_get_name(error),         
-	                   "org.meego.activesyncd.SyncError.INVALIDSYNCKEY"),  
+	                   "org.gnome.activesyncd.SyncError.INVALIDSYNCKEY"),  
 	        "The Error returned by the server is not correct.");
 	
     //  free everything!
@@ -1226,7 +1226,7 @@ START_TEST (test_consume_response)
 	
 	g_debug("error is %s",dbus_g_error_get_name(error));
 	fail_if(g_strcmp0 (dbus_g_error_get_name(error),         
-	                   "org.meego.activesyncd.SyncError.INVALIDSYNCKEY"),  
+	                   "org.gnome.activesyncd.SyncError.INVALIDSYNCKEY"),  
 	        "The Error returned by the server is not correct.");
 	
     //  free everything!

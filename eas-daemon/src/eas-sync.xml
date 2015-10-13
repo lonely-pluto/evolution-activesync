@@ -6,9 +6,9 @@
 -->
 <node>
 <!--
-  <interface name="org.meego.Eas">
+  <interface name="org.gnome.Eas">
 -->
-  <interface name="org.meego.activesyncd.EasSync">
+  <interface name="org.gnome.activesyncd.EasSync">
 
 <!--
  get latest changes from folder 

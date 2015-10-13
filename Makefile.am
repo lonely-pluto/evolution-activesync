@@ -13,7 +13,7 @@ if ENABLE_CAMEL_BACKEND
   CAMEL_DIRS = libevoeas camel
 endif
 
-gsettings_SCHEMAS = org.meego.activesyncd.gschema.xml org.meego.activesyncd.account.gschema.xml
+gsettings_SCHEMAS = org.gnome.activesyncd.gschema.xml org.gnome.activesyncd.account.gschema.xml
 
 @GSETTINGS_RULES@
 

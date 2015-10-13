@@ -133,11 +133,11 @@ eas_account_list_set_account_info(EasAccountInfo *acc_info, const gchar* uid)
 
 	acc_info->uid = g_strdup(uid); // Ownership passed to the account into structure.
 
-	gchar *account_address = g_strdup_printf ("/org/meego/activesyncd/account/%s/", uid);
+	gchar *account_address = g_strdup_printf ("/org/gnome/activesyncd/account/%s/", uid);
 
 		g_debug("Path is %s\n", account_address);
 		
-	GSettings *setting = g_settings_new_with_path ("org.meego.activesyncd.account", account_address);
+	GSettings *setting = g_settings_new_with_path ("org.gnome.activesyncd.account", account_address);
 
 	g_free (account_address);
 	account_address = NULL;
@@ -470,12 +470,12 @@ eas_account_list_save_account(EasAccountList *account_list,
 		return;
 	}
 
-	gchar *account_address = g_strdup_printf ("/org/meego/activesyncd/account/%s/", uid);
+	gchar *account_address = g_strdup_printf ("/org/gnome/activesyncd/account/%s/", uid);
 
 
 		g_debug("Path is %s\n", account_address);
 		
-	GSettings *setting = g_settings_new_with_path ("org.meego.activesyncd.account", account_address);
+	GSettings *setting = g_settings_new_with_path ("org.gnome.activesyncd.account", account_address);
 		
 	g_free (account_address);
 	account_address = NULL;
@@ -530,11 +530,11 @@ eas_account_list_save_account_from_info(EasAccountList *account_list,
 	
 	uid = acc_info->uid;
 
-	gchar *account_address = g_strdup_printf ("/org/meego/activesyncd/account/%s/", uid);
+	gchar *account_address = g_strdup_printf ("/org/gnome/activesyncd/account/%s/", uid);
 
 		g_debug("Path is %s\n", account_address);
 		
-	GSettings *setting = g_settings_new_with_path ("org.meego.activesyncd.account", account_address);
+	GSettings *setting = g_settings_new_with_path ("org.gnome.activesyncd.account", account_address);
 		
 	g_free (account_address);
 	account_address = NULL;
@@ -642,11 +642,11 @@ eas_account_list_save_item(EasAccountList *account_list,
 
 	uid = eas_account_get_uid(account);
 	
-	gchar *account_address = g_strdup_printf ("/org/meego/activesyncd/account/%s/", uid);
+	gchar *account_address = g_strdup_printf ("/org/gnome/activesyncd/account/%s/", uid);
 
 		g_debug("Path is %s\n", account_address);
 		
-	GSettings *setting = g_settings_new_with_path ("org.meego.activesyncd.account", account_address);
+	GSettings *setting = g_settings_new_with_path ("org.gnome.activesyncd.account", account_address);
 		
 	g_free (account_address);
 	account_address = NULL;

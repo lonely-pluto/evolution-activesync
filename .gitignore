@@ -16,7 +16,7 @@ libtool
 stamp-h1
 eas-daemon/src/activesyncd
 eas-daemon/tests/activesyncd-test-001
-eas-daemon/data/org.meego.activesyncd.service
+eas-daemon/data/org.gnome.activesyncd.service
 libeasmail/tests/libeasmail_test
 libeasaccount/tests/libeasaccount_test
 TODO.tasks

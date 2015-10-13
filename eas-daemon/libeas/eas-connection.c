@@ -176,7 +176,7 @@ eas_connection_accounts_init()
 {
 	g_debug ("eas_connection_accounts_init++");
 	if (!g_gsetting) {
-		g_gsetting = g_settings_new("org.meego.activesyncd");
+		g_gsetting = g_settings_new("org.gnome.activesyncd");
 		if (g_gsetting == NULL) {
 			g_critical ("Error Failed to create GSettings");
 			return;

@@ -1,5 +1,5 @@
 <schemalist>
-	<schema id="org.meego.activesyncd" path="/org/meego/activesyncd/">
+	<schema id="org.gnome.activesyncd" path="/org/gnome/activesyncd/">
 		<key name='accounts' type='as'>
 			<default>[]</default>
 		</key>

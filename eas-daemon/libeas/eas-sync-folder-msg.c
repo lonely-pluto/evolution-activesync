@@ -203,7 +203,7 @@ eas_sync_folder_msg_parse_response (EasSyncFolderMsg* self, const xmlDoc *doc, G
 	EasAccountList *account_list = NULL;
 	GSettings *g_gsetting = NULL;
 
-	g_gsetting = g_settings_new ("org.meego.activesyncd");
+	g_gsetting = g_settings_new ("org.gnome.activesyncd");
 	g_assert (g_gsetting != NULL);
 	/* Get list of accounts from GSettings repository */
 	account_list = eas_account_list_new (g_gsetting);

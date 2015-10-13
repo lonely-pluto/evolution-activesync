@@ -7,9 +7,9 @@
 
 <node>
 <!--
-  <interface name="org.meego.Eas">
+  <interface name="org.gnome.Eas">
 -->
-  <interface name="org.meego.activesyncd.EasCommon">
+  <interface name="org.gnome.activesyncd.EasCommon">
 
   <!-- TODO: This is just an example exposed API use as a test - -->
     <method name="start_sync">

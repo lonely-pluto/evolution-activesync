@@ -148,7 +148,7 @@ AC_CONFIG_FILES([
     Makefile
     eas-daemon/Makefile
     eas-daemon/data/Makefile
-    eas-daemon/data/org.meego.activesyncd.service
+    eas-daemon/data/org.gnome.activesyncd.service
     eas-daemon/libeas/Makefile
     eas-daemon/src/Makefile
     collection/Makefile

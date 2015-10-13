@@ -300,11 +300,11 @@ mail_config_eas_backend_setup_defaults (EMailConfigServiceBackend *backend)
 
 	if (email_address != NULL) {
 		CamelNetworkSettings *network_settings;
-		gchar *account_address = g_strdup_printf ("/org/meego/activesyncd/account/%s/", email_address);
+		gchar *account_address = g_strdup_printf ("/org/gnome/activesyncd/account/%s/", email_address);
 		
 		g_debug("Path is %s\n", account_address);
 		
-		GSettings *account = g_settings_new_with_path ("org.meego.activesyncd.account", account_address);
+		GSettings *account = g_settings_new_with_path ("org.gnome.activesyncd.account", account_address);
 		
 		g_free (account_address);
 	
@@ -394,13 +394,13 @@ mail_config_eas_backend_commit_changes (EMailConfigServiceBackend *backend)
 
 	if (email_address != NULL) {
 		int i = 0;
-		GSettings *account_info = g_settings_new ("org.meego.activesyncd");
+		GSettings *account_info = g_settings_new ("org.gnome.activesyncd");
 		gchar **accounts = g_settings_get_strv(account_info, "accounts");
-		gchar *account_address = g_strdup_printf ("/org/meego/activesyncd/account/%s/", email_address);
+		gchar *account_address = g_strdup_printf ("/org/gnome/activesyncd/account/%s/", email_address);
 
 		g_debug("Path is %s\n", account_address);
 
-		GSettings *account = g_settings_new_with_path ("org.meego.activesyncd.account", account_address);
+		GSettings *account = g_settings_new_with_path ("org.gnome.activesyncd.account", account_address);
 		
 		g_free (account_address);
 

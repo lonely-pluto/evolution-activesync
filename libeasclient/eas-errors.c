@@ -27,7 +27,7 @@
 
 #include "eas-errors.h"
 
-#define ERRVAL(x,y) {x, "org.meego.activesyncd." y}
+#define ERRVAL(x,y) {x, "org.gnome.activesyncd." y}
 
 static const GDBusErrorEntry eas_connection_error_entries[] =
 {

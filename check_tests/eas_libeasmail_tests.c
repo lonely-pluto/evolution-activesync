@@ -735,7 +735,7 @@ START_TEST (test_eas_mail_sync_folder_hierarchy_bad_synckey)
     GetFolderHierarchy_negativetests (email_handler, sync_key, &created, &updated, &deleted, &error);
 
 	fail_if(g_strcmp0 (dbus_g_error_get_name(error),
-	                   "org.meego.activesyncd.FolderSyncError.INVALIDSYNCKEY"),
+	                   "org.gnome.activesyncd.FolderSyncError.INVALIDSYNCKEY"),
 	        "Incorrect handling of invalid sync key");
 	
     //  free everything!
@@ -881,7 +881,7 @@ START_TEST (test_get_eas_mail_info_bad_folder_id)
     GetFolderInfo_negativetests (email_handler, folder_sync_key, "wrong", &emails_created, &emails_updated, &emails_deleted, &more_available, &error);
 
 	fail_if(g_strcmp0 (dbus_g_error_get_name(error),
-	                   "org.meego.activesyncd.SyncError.OBJECTNOTFOUND"),
+	                   "org.gnome.activesyncd.SyncError.OBJECTNOTFOUND"),
 	        "Incorrect handling of invalid sync key");
 
 	g_debug("%s",dbus_g_error_get_name(error));
@@ -1880,7 +1880,7 @@ START_TEST (test_get_eas_mail_info_bad_sync_key)
 
 	g_debug("error is %s",dbus_g_error_get_name(error));
 	fail_if(g_strcmp0 (dbus_g_error_get_name(error),         
-	                   "org.meego.activesyncd.SyncError.INVALIDSYNCKEY"),  
+	                   "org.gnome.activesyncd.SyncError.INVALIDSYNCKEY"),  
 	        "Incorrect handling of Sync Key");
 
 
@@ -1917,7 +1917,7 @@ START_TEST (test_get_eas_mail_attachment_invalid_file_reference)
        
        g_debug("error is %s",dbus_g_error_get_name(error));
        fail_if(g_strcmp0 (dbus_g_error_get_name(error),         
-                          "org.meego.activesyncd.ItemOperationsError.INVALIDATTACHMENT"),  
+                          "org.gnome.activesyncd.ItemOperationsError.INVALIDATTACHMENT"),  
                "The Error returned by the server is not correct.");
        
        g_object_unref (email_handler);
@@ -1943,7 +1943,7 @@ START_TEST (test_get_eas_mail_delete_invalid_server_id)
        
        g_debug("error is %s",dbus_g_error_get_name(error));
        fail_if(g_strcmp0 (dbus_g_error_get_name(error),         
-                          "org.meego.activesyncd.Error.XMLELEMENTNOTFOUND"),  
+                          "org.gnome.activesyncd.Error.XMLELEMENTNOTFOUND"),  
                "The Error returned by the server is not correct.");
        
        g_object_unref (email_handler);
@@ -1976,7 +1976,7 @@ START_TEST (test_get_eas_mail_info_bad_folder_structure)
 
        g_debug("error is %s",dbus_g_error_get_name(error));
        fail_if(g_strcmp0 (dbus_g_error_get_name(error),         
-                          "org.meego.activesyncd.SyncError.FOLDERHIERARCHYCHANGED"),  
+                          "org.gnome.activesyncd.SyncError.FOLDERHIERARCHYCHANGED"),  
                "The Error returned by the server is not correct.");
     //  free email objects in lists of email objects
     g_slist_foreach (emails_deleted, (GFunc) g_object_unref, NULL);
@@ -2024,7 +2024,7 @@ START_TEST (test_get_eas_mail_info_invalid_folder)
 
        g_debug("error is %s",dbus_g_error_get_name(error));
        fail_if(g_strcmp0 (dbus_g_error_get_name(error),         
-                          "org.meego.activesyncd.SyncError.OBJECTNOTFOUND"),  
+                          "org.gnome.activesyncd.SyncError.OBJECTNOTFOUND"),  
                "The Error returned by the server is not correct.");
 
 
@@ -2065,7 +2065,7 @@ START_TEST (test_get_eas_mail_body_invalid_server_id)
        
        g_debug("error is %s",dbus_g_error_get_name(error));
        fail_if(g_strcmp0 (dbus_g_error_get_name(error),         
-                          "org.meego.activesyncd.ItemOperationsError.OBJECTNOTFOUND"),  
+                          "org.gnome.activesyncd.ItemOperationsError.OBJECTNOTFOUND"),  
                "The Error returned by the server is not correct.");
        
        g_object_unref (email_handler);
@@ -2091,7 +2091,7 @@ START_TEST (test_get_eas_mail_attachment_invalid_mime_directory)
        
        g_debug("error is %s",dbus_g_error_get_name(error));
        fail_if(g_strcmp0 (dbus_g_error_get_name(error),         
-                          "org.meego.activesyncd.Error.FILEERROR"),  
+                          "org.gnome.activesyncd.Error.FILEERROR"),  
                "The Error returned by the server is not correct.");
        
        g_object_unref (email_handler);
@@ -2117,7 +2117,7 @@ START_TEST (test_get_eas_mail_body_invalid_mime_directory)
        
        g_debug("error is %s",dbus_g_error_get_name(error));
        fail_if(g_strcmp0 (dbus_g_error_get_name(error),         
-                          "org.meego.activesyncd.Error.FILEERROR"),  
+                          "org.gnome.activesyncd.Error.FILEERROR"),  
                "The Error returned by the server is not correct.");
        
        g_object_unref (email_handler);
@@ -2340,7 +2340,7 @@ START_TEST (test_consume_response)
 
 	g_debug("error is %s",dbus_g_error_get_name(error));
 	fail_if(g_strcmp0 (dbus_g_error_get_name(error),         
-	                   "org.meego.activesyncd.SyncError.INVALIDSYNCKEY"),  
+	                   "org.gnome.activesyncd.SyncError.INVALIDSYNCKEY"),  
 	        "Incorrect handling of Sync Key");
 
 

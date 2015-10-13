@@ -104,7 +104,7 @@ eas_common_class_init (EasCommonClass *klass)
 	dbus_g_object_type_install_info (EAS_TYPE_COMMON,
 					 &dbus_glib_eas_common_object_info);
 	dbus_g_error_domain_register (EAS_CONNECTION_ERROR,
-				      "org.meego.activesyncd",
+				      "org.gnome.activesyncd",
 				      EAS_TYPE_CONNECTION_ERROR);
 }
 

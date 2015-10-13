@@ -1,5 +1,5 @@
 <schemalist>
-	<schema id="org.meego.activesyncd.account">
+	<schema id="org.gnome.activesyncd.account">
 		<key name='username' type='s'>
 			<default>''</default>
 		</key>
